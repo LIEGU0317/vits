@@ -1,7 +1,6 @@
 import re
 import opencc
 
-
 dialects = {'SZ': 'suzhou', 'WX': 'wuxi', 'CZ': 'changzhou', 'HZ': 'hangzhou',
             'SX': 'shaoxing', 'NB': 'ningbo', 'JJ': 'jingjiang', 'YX': 'yixing',
             'JD': 'jiading', 'ZR': 'zhenru', 'PH': 'pinghu', 'TX': 'tongxiang',
@@ -20,7 +19,7 @@ for dialect in dialects.values():
 
 def ngu_dialect_to_ipa(text, dialect):
     dialect = dialects[dialect]
-    text = converters[dialect].convert(text).replace('-','').replace('$',' ')
+    text = converters[dialect].convert(text).replace('-', '').replace('$', ' ')
     text = re.sub(r'[、；：]', '，', text)
     text = re.sub(r'\s*，\s*', ', ', text)
     text = re.sub(r'\s*。\s*', '. ', text)
