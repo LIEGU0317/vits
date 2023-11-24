@@ -1,0 +1,22 @@
+Cython==0.29.21
+librosa==0.10.0.post2
+matplotlib==3.7.1
+numpy==1.24.1
+scipy==1.10.1
+tensorboard==2.13.0
+unidecode==1.1.1
+pyopenjtalk
+jamo
+pypinyin
+jieba
+protobuf
+cn2an
+inflect
+eng_to_ipa
+ko_pron
+indic_transliteration
+num_thai
+opencc
+--extra-index-url https://download.pytorch.org/whl/cu116
+torch==1.13.1+cu116
+torchaudio==0.13.1+cu116
