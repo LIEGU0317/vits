@@ -1,6 +1,14 @@
 # 如何使用
 
-（建议）Python == 3.7
+## Python Version
+### Python3.10
+```bash
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu116
+```
+### Python3.7
+```bash
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu110
+```
 
 ## 克隆这个仓库
 
@@ -56,16 +64,17 @@ dataset/001.wav|0|こんにちは。
 
 ```sh
 # 单一发音人
-python preprocess.py --text_index 1 --filelists path/to/filelist_train.txt path/to/filelist_val.txt
+python preprocess.py --text_index 1 --filelists path/to/filelist_train.txt path/to/filelist_val.txt --text_cleaners chinese_cleaners
 
 # 多个发音人
-python preprocess.py --text_index 2 --filelists path/to/filelist_train.txt path/to/filelist_val.txt
+python preprocess.py --text_index 2 --filelists path/to/filelist_train.txt path/to/filelist_val.txt --text_cleaners chinese_cleaners
 ```
 
 ## 构建单调对齐搜索
 
 ```sh
 cd monotonic_align
+#mkdir "monotonic_align"  # Windows
 python setup.py build_ext --inplace
 cd ..
 ```
