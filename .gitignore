@@ -16,3 +16,14 @@ configs/tolove_japanese_base2.json
 # 配置文件夹
 .idea/
 .vs/
+paimonwav/*
+paimonout/paimon6k_390k.pth
+filelists/filelist_train.txt
+filelists/filelist_train.txt.cleaned
+filelists/filelist_val.txt
+filelists/filelist_val.txt.cleaned
+.vscode/
+音频处理脚本/
+.gitignore
+vits项目介绍（包括资料下载链接）.xmind
+configs/paimon6k.json
