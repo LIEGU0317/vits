@@ -1,5 +1,6 @@
 # For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:3.7-slim
+# FROM python:3.7-slim
+FROM python:3.10-slim
 
 # Keeps Python from generating .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -7,17 +8,18 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 # Install pip requirements
-COPY requirements.txt .
+COPY requirements_py310.txt .
 RUN apt-get update
 RUN apt-get install -y vim
 RUN apt-get install -y gcc
 RUN apt-get install -y g++
 RUN apt-get install -y cmake
 RUN apt-get install -y libsndfile1
-RUN python -m pip install -r requirements.txt
+# RUN python -m pip install -r requirements.txt
+RUN python -m pip install -r requirements_py310.txt
 
 WORKDIR /content
 COPY . /content
 
-# Build monotonic alignment search
-RUN cd monotonic_align && python3 setup.py build_ext --inplace
+# # Build monotonic alignment search
+# RUN cd monotonic_align && mkdir monotonic_align && python3 setup.py build_ext --inplace
