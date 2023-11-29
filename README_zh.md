@@ -1,17 +1,39 @@
 # 如何使用
 
-> 如果你也苦于没有GPU，可以试试 Featurize 平台，这里是我的[邀请链接](https://featurize.cn?s=fd01af08da454204adf7aef8e07caa64)。
+> 如果你也没有GPU资源，可以尝试使用 Featurize 平台。以下是我的[邀请链接](https://featurize.cn?s=fd01af08da454204adf7aef8e07caa64)。
+
+在 Featurize 平台上，你可以找到以下资源：
+- [paimon中文语音数据集-单声道-22050Hz](https://featurize.cn/datasets/paimon_video)
+- [paimon中文语音数据集-单声道-48000Hz](https://featurize.cn/datasets/paimon_audio_v2)
+
+**当前使用环境**
+
+- **硬件和软件配置**：
+  - Python 3.7
+  - CUDA 11.2
+  - Telsa V100 GPU
+- **安装的库**：
+  - PyTorch 1.6.0 (CUDA 10.1 版本)
+  - torchaudio 0.6.0
+  - torchvision 0.7.0 (CUDA 10.1 版本)
+- **基于 Featurize 基础环境**：
+  - PyTorch 1 环境（兼容性好）
+  - Docker 20.10.10
+  - Python v3.7
+  - PyTorch v1.10
+  - TensorFlow v2.7.0
+
 
 ## Python 版本
 
-### Python 3.10（推荐）
-```bash
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu116
-```
-
 ### Python 3.7
 ```bash
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu110
+pip install torch==1.6.0+cu101 torchvision==0.7.0+cu101 torchaudio==0.6.0 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+### Python 3.10
+```bash
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu116
 ```
 
 ## 克隆这个仓库
@@ -31,7 +53,7 @@ git clone https://github.com/LIEGU0317/vits.git
 ## 安装依赖
 
 ```sh
-pip install -r requirements_py310.txt  # 或 requirements.txt
+pip install -r requirements.txt  # 或 requirements_py310.txt
 ```
 
 ## 创建数据集
